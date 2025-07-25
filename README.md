@@ -21,7 +21,7 @@ You can install Omakos using one of these two methods:
 Run this single command in your terminal:
 
 ```sh
-curl -L https://raw.githubusercontent.com/yatish27/omakos/main/install.sh | bash
+curl -L https://raw.githubusercontent.com/tommodore/omakos/main/install.sh | bash
 ```
 
 ### Option 2: Manual Install
@@ -31,7 +31,7 @@ If you prefer to review the code first:
 1. Download the repo:
 
 ```sh
-git clone https://github.com/yatish27/omakos.git && cd omakos
+git clone https://github.com/tommodore/omakos.git && cd omakos
 ```
 
 2. Review the scripts (please don't run scripts you don't understand):
@@ -138,7 +138,6 @@ Each script in the [`scripts/`](scripts/) directory can be run independently:
 # Run individual scripts
 ./scripts/mac_setup.sh     # Only configure macOS settings
 ./scripts/git_setup.sh     # Only setup Git configuration
-./scripts/cursor_setup.sh  # Only configure Cursor editor
 ./scripts/mise.sh         # Only setup mise and install configured runtimes
 ./scripts/dotfiles_setup.sh # Only setup dotfiles
 ./scripts/ssh_setup.sh    # Only configure SSH settings
@@ -160,7 +159,6 @@ omakos/
 ├── scripts/
 │   ├── ascii.sh            # ASCII art for terminal output
 │   ├── brew.sh             # Homebrew package installation
-│   ├── cursor_setup.sh     # Cursor editor configuration
 │   ├── dotfiles_setup.sh   # Dotfiles management
 │   ├── git_setup.sh        # Git configuration
 │   ├── mac_setup.sh        # macOS system preferences
@@ -170,11 +168,10 @@ omakos/
 │   └── zsh_setup.sh        # ZSH shell setup
 ├── configs/
 │   ├── Brewfile            # Homebrew packages list
-│   ├── cursor/             # Cursor editor settings
 │   ├── git/                # Git configuration files
 │   ├── ssh/                # SSH configuration files
 │   ├── gemrc              # Ruby gems configuration
-│   ├── ghostty.conf       # Ghostty terminal config
+│   ├── wezterm.conf       # Wezterm terminal config
 │   ├── mise.toml          # Mise runtime versions config
 │   └── rubocop.yml        # Ruby code style config
 └── README.md
