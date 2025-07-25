@@ -20,3 +20,4 @@ else
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   print_success "oh-my-zsh installed!"
 fi
+
