@@ -55,3 +55,4 @@ if [ "$gitconfig_setup" = true ]; then
 else
   print_success_muted "Git setup completed (configuration skipped)."
 fi
+

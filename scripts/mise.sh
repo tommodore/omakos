@@ -37,3 +37,4 @@ if [ -f "$HOME/.mise.toml" ]; then
 else
   print_warning "mise configuration file not found in home directory"
 fi
+

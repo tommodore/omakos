@@ -65,7 +65,7 @@ step "Configuring enhanced screenshot settings..."
 mkdir -p ~/Desktop/Screenshots
 defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.screencapture "include-date" -bool "true"
-defaults write com.apple.screencapture location -string "$HOME/Desktop/Screenshots"
+defaults write com.apple.screencapture location -string "$HOME/Screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 print_success_muted "Screenshot settings configured"
 
@@ -93,9 +93,9 @@ defaults write com.apple.dock mru-spaces -bool false
 print_success_muted "Dock preferences configured"
 
 # iCloud default save
-step "Setting default save location to local disk instead of iCloud..."
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-print_success_muted "Default save location configured"
+#step "Setting default save location to local disk instead of iCloud..."
+#defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+#print_success_muted "Default save location configured"
 
 # Disable Apple Intelligence
 step "Disabling Apple Intelligence..."
@@ -111,3 +111,4 @@ print_success_muted "Applications restarted"
 
 echo ""
 print_success "macOS settings have been updated successfully!"
+

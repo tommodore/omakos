@@ -7,24 +7,24 @@ source ./scripts/utils.sh
 
 # Create the .config directory if it doesn't exist
 mkdir -p "$HOME/.config"
-mkdir -p "$HOME/.config/ghostty"
+mkdir -p "$HOME/.config/wezterm"
 
-# Copy ghostty configuration
-if [ -f "./configs/ghostty.conf" ]; then
-  step "Setting up Ghostty configuration..."
-  if [ ! -f "$HOME/.config/ghostty/config" ]; then
-    cp "./configs/ghostty.conf" "$HOME/.config/ghostty/config"
-    print_success "Ghostty configuration installed"
-  elif files_are_identical "$HOME/.config/ghostty/config" "./configs/ghostty.conf"; then
-    print_success_muted "Ghostty configuration already up to date"
-  elif confirm_override "$HOME/.config/ghostty/config" "./configs/ghostty.conf" "Ghostty configuration"; then
-    cp "./configs/ghostty.conf" "$HOME/.config/ghostty/config"
-    print_success "Ghostty configuration installed"
+# Copy wezterm configuration
+if [ -f "./configs/wezterm.lua" ]; then
+  step "Setting up Wezterm configuration..."
+  if [ ! -f "$HOME/.config/wezterm/config" ]; then
+    cp "./configs/wezterm.lua" "$HOME/.config/wezterm/config"
+    print_success "Wezterm configuration installed"
+  elif files_are_identical "$HOME/.config/wezterm/config" "./configs/wezterm.lua"; then
+    print_success_muted "Wezterm configuration already up to date"
+  elif confirm_override "$HOME/.config/wezterm/config" "./configs/wezterm.lua" "Wezterm configuration"; then
+    cp "./configs/wezterm.lua" "$HOME/.config/wezterm/config"
+    print_success "Wezterm configuration installed"
   else
-    print_muted "Skipping Ghostty configuration"
+    print_muted "Skipping Wezterm configuration"
   fi
 else
-  print_warning "Ghostty configuration file not found"
+  print_warning "Wezterm configuration file not found"
 fi
 
 # Copy rubocop configuration
@@ -98,3 +98,4 @@ if [ -f "./configs/mise.toml" ]; then
 else
   print_warning "mise configuration file not found"
 fi
+

@@ -22,3 +22,4 @@ else
   chmod 600 "$HOME/.ssh/config"
   print_success "SSH config copied!"
 fi
+
